@@ -16,23 +16,23 @@
 
 #scoreBox {
   position: absolute;
-  top: 9px;
-  right: 200px;
+  top: 1px;
+  right: 150px;
   color: red;
-  font-size: 39px;
+  font-size: 35px;
   font-weight: bold;
   font-family: cursive;
 }
 #scoreBox:hover {
-  font-size: 49px;
+  font-size: 45px;
   color: yellow;
 }
 
 #hiscoreBox {
   position: absolute;
-  top: 75px;
-  right: 150px;
-  font-size: 39px;
+  top: 45px;
+  right: 90px;
+  font-size: 35px;
   color: brown;
   font-weight: bold;
   font-family: cursive;
@@ -43,28 +43,47 @@
 }
 
 #board {
-  background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
-  width: 90vmin;
+  color: #fff;
+  background: linear-gradient(-55deg, #d67557,#a75166,#2ab1e2,#23D5AB);
+  position: relative;
+  width: 120vmin;
   height: 72vmin;
   margin-top: 50px;
-  margin-left: 320px;
+  margin-left: 360px;
   border: 7px solid rgb(173, 26, 154);
   display: grid;
   grid-template-rows: repeat(18, 1fr);
   grid-template-columns: repeat(18, 1fr);
   border-radius: 22px;
+  animation-name:change ;
+  animation: change 1s ease-in-out infinite ;
+}
+@keyframes  change{
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
 }
 
 .head {
   background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
   border: 2px solid rgb(34, 4, 34);
+  width: 25px;
+  height: 29px;
   transform: scale(1.02);
-  border-radius: 9px;
+  border-radius: 50%;
 }
 
 .snake {
   background-color: rgb(47, 27, 221);
   border: 0.35vmin solid white;
+  width: 25px;
+  height: 29px;
   border-radius: 12px;
 }
 
@@ -75,14 +94,15 @@
 }
 footer {
   position: absolute;
-  margin-top: 345px;
+  margin-top: 545px;
   width: 50%;
   height: 45px;
   margin-left: 0px;
-  color: rgb(11, 240, 228);
+  color:rgb(235, 107, 21);
   text-align: center;
   font-family: cursive;
   padding-top: 15px;
-  font-size: x-large;
+  font-size: large;
   font-weight: bold;
 }
+
